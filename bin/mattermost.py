@@ -35,7 +35,7 @@ def main():
             ": " + obj['check']['output']
 
     event = {"text": message}
-    r = post(args.url, data=json.dumps(event))
+    r = post(args.url, json=event)
 
     if r.status_code != 200:
         sys.exit(1)
