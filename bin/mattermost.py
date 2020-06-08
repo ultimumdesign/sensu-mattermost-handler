@@ -37,6 +37,11 @@ def main():
     event = {"text": message}
     r = post(args.url, data=json.dumps(event))
 
+    if r.status_code != 200:
+        sys.exit(1)
+    else:
+        sys.exit(0)
+
 
 if __name__ == '__main__':
     main()
