@@ -34,7 +34,7 @@ def main():
         message = obj['entity']['system']['hostname'] + \
             ": " + obj['check']['output']
 
-    event = {"message": message}
+    event = {"text": message}
     r = post(args.url, data=json.dumps(event))
 
 
